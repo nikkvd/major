@@ -23,7 +23,7 @@ setInterval(() => {
     const minutes = time.getMinutes();
     const ampm = hour >= 12 ? 'PM' : 'AM';
 
-    timeEl.innerHTML = (hourIn12HrFormat < 10? '0'+hourIn12HrFormat : hourIn12HrFormat) + ':' + (minutes < 10? '0'+minutes: minutes) + ' ' + `<span id="am-pm">${ampm}</span>`;
+    timeEl.innerHTML = (hourIn12HrFormat < 10? '0'+hourIn12HrFormat : hourIn12HrFormat) + ':' + (minutes < 10? '0'+minutes: minutes) + '' + `<span id="am-pm">${ampm}</span>`;
 
     dateEl.innerHTML = days[dayOfWeek] + ', ' + date + ' ' + months[month];
 }, 1000);
